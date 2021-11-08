@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 334">   
+   <!-- arc -->
+   <path d="M 55.5 283 A 166.6 166.6 0 1 1 344.5 283" fill="none" stroke="black" stroke-width="40" stroke-linecap="round"/>
+   
+   
+   <!-- main black circle -->
+   <circle cx="200" cy="200" r="119.9" fill="black"/>
+   <!-- inner white circle -->
+   <circle cx="200" cy="200" r="80" fill="white"/>
+   <!-- innermost black circle -->
+   <circle cx="200" cy="200" r="19.8" fill="black"/>
+   <!-- innermost white circle -->
+   <circle cx="205" cy="195" r="8.3" fill="white" />
+   
+   
+   <!-- connecting line from cirlce ot arc -->
+   <line x1="200" y1="53" x2="200" y2="82" style="stroke:rgb(0,0,0);stroke-width:40;" />
+   <!-- outer 'lines' on arc -->
+   <line x1="58.7" y1="58.7" x2="70" y2="70" style="stroke:rgb(0,0,0);stroke-width:40;stroke-linecap:round;"/>
+   <line x1="330" y1="70" x2="341.3" y2="58.7" style="stroke:rgb(0,0,0);stroke-width:40;stroke-linecap:round;"/>
+   
+   
+</svg>

@@ -1,0 +1,13 @@
+SELECT * FROM Operator WHERE First_Name LIKE 'John1';
+
+SELECT Last_Name, First_Name FROM Operator ORDER BY Last_Name, First_Name;
+
+SELECT * FROM Drone WHERE Operator IS NOT NULL;
+
+SELECT * FROM Drone WHERE Operator IS NULL;
+
+SELECT * FROM Drone d
+LEFT JOIN (SELECT ID, First_Name AS Name, Drone
+			FROM Operator) o
+ON d.ID = o.Drone;
+

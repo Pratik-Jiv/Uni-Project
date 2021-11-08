@@ -1,0 +1,33 @@
+<!DOCTPYE html>
+<html>
+<head>
+	<meta charset="UTF-8"/>
+	<title>REPORT</title>
+	<link rel="stylesheet" type="text/css" href="pjiv657.css">
+	<script src="pjiv657.js"></script>
+</head>
+<body>
+	<div id="header">
+		<h2> NZ COVID-19 Cases </h2>
+		<hr>
+		<div id="nav">
+			<h3>Latest case news</h3>
+			<h3 id="d" style="border-bottom-color:yellow;"onclick="show('daily')">Cases per day</h3>
+			<h3 id="t" onclick="show('total')">Total cases</h3>
+		</div>
+	</div>
+	<div id="main">
+	<h4 id="today"></h4>
+	</div>
+	<div id="daily">
+	<h4>The trend of confirmed daily cases of COVID-19 in New Zealand. Each point below represents the number of confirmed cases on a single day.</h4>
+	<svg id="dailyGraph" viewBox="0 0 4000 4500" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:800px">
+	</svg>
+	</div>
+	<div id="total">
+	<h4>The total number of confirmed cases, are recorded daily and displayed here.</h4>
+	<svg id="totalGraph"  viewBox="0 0 4000 4500"  xmlns="http://www.w3.org/2000/svg" style="width:100%;height:1000px;">
+	</svg>
+	</div>
+</body>
+</html>

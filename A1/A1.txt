@@ -1,0 +1,13 @@
+===============================================================	
+	Name: Pratik Jivanji
+
+	UPI: pjiv657
+
+	StudentID: 776514473
+===============================================================
+Roughly spent 1-2 hours everyday over 2 weeks, so an estimated 15 hours collectively (this included thinking, planning and going over notes).
+
+The easier sections of the assignment were changing the array to an array list and drawing the simple shapes, shapes without patterns. The patterned shapes were a bit more difficult as it required another implemented draw method in the parent tree to remove one of the bounds/colours in addition to it's own to draw the patterns.
+
+The assignment helped me understand the concepts of inheritance and the super/sub heirachy. How a subclass defaultly inherits the super class's methods and how they can be called using the 'super' call.
+

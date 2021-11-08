@@ -1,0 +1,24 @@
+USE pjiv657_Lab;
+
+CREATE TABLE STORE
+(BusinessEntityID Int,
+StoreName nvarchar(70),
+SalesPersonId Int);
+
+Lab exc.
+
+USE pjiv657_AWLT;
+
+SELECT *
+FROM Product;
+
+SELECT * 
+FROM Product
+WHERE ProductNumber LIKE 'F%';
+
+SELECT *
+FROM Product
+WHERE Cost > 10 AND Cost < 20;
+
+SELECT AVG(ListPrice) AS AvgPrice
+FROM Product;

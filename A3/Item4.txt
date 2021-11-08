@@ -1,0 +1,30 @@
+DROP TABLE IF EXISTS Drone;
+DROP TABLE IF EXISTS Operator;
+
+CREATE TABLE Drone(
+	ID INT NOT NULL AUTO_INCREMENT,
+	Name VARCHAR(16) NOT NULL,
+	Class_Type INT NOT NULL,
+	Rescue BOOLEAN,
+	
+	PRIMARY KEY (ID)
+	);
+    
+CREATE TABLE Operator(
+	ID INT NOT NULL AUTO_INCREMENT,
+	First_Name VARCHAR(16) NOT NULL,
+	Last_Name VARCHAR(16) NOT NULL,
+	Date_of_Birth DATE,
+	Drone_License INT,
+	Rescue_Endorsement BOOLEAN,
+	Operations INT,
+	Drone INT,
+	
+	PRIMARY KEY (ID),
+	FOREIGN KEY (Drone) REFERENCES Drone(ID)
+	);
+	
+ALTER TABLE Drone
+ADD COLUMN Operator INT;
+ALTER TABLE Drone
+ADD FOREIGN KEY (Operator) REFERENCES Operator(ID);

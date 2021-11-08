@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8"/>
+		<link rel="icon" href="http://redsox.uoa.auckland.ac.nz/ds/logo-192x192.png">		
+		<title> Dunedin Dairy </title>
+		<!-- links to the relevant css and jscript files -->
+		<link rel="stylesheet" type="text/css" href="pjiv657.css">
+		<script src="pjiv657.js"></script>
+	</head>
+	<!-- end of the head -->
+	<body>
+		<!-- header -->
+		<div id="header">
+			<!-- logo here, size 192x192 -->
+			<img id ="logo" src="http://redsox.uoa.auckland.ac.nz/ds/logo-192x192.png" alt="Dunedin Dairy logo" >			
+			
+			<p id="userTop" style="float:right;height:0px;display:none;"></p>
+			<!-- navigation as 'emojis' (unicode characters)-->
+			<!-- on click change section -->
+			<h1 id="h"onclick='showSection("home");'>&#127968;</h1>
+			<h1 id="p"onclick='showSection("products");'>&#128722;</h1>
+			<h1 id="l"onclick='showSection("location");'>&#128204;</h1>
+			<h1 id="n"onclick='showSection("news");'>&#128240;</h1>
+			<h1 id="u"onclick='showSection("user");'>&#x1f464;</h1>
+			<h1 id="g"onclick='showSection("guestbook");'>&#128214;</h1>
+			
+			
+			
+		</div>
+		<!-- body content with extended title in header -->
+		
+		<div id="home" class="section">
+		<!-- introductory/landing section -->
+			<h2> Home </h2>
+			<hr>
+			<p class="intro">Dundein dairy is a local store that sepcialises in everything dairy. Sourced from healthy cows and happy farmers, Dundein Dairy only uses the freshest milk to produce their high quality goods for you to purchase at any time! We take pride in our products and our services, as one of New Zealand's top dairy services available. Our online store is open 24/7 and we provide quick, contactless, deliveries to ensure that the products you purchase are as good as when they leave our facility and to keep our drivers and other people in the community safe.
+			</p>
+			<!--image is usable for commercial and noncomercial reuse (according to google's tool)-->
+			<img style="margin-left:20%; margin-top:25px; width:60%; min-width:300px;" src="https://cdn.pixabay.com/photo/2017/08/14/17/12/cows-2641195_960_720.jpg" alt="dairy cows">
+			<p style="margin-left:20%; font-size:12px;"> Pixabay -  TheDiditalArtist, Pete Linforth: Cows and cattle</p>
+			<hr style="width:70%; margin-left:15%; height:0px;">
+			<p id="foot">&#169 </p>
+		</div>
+		
+		<div id="products" class="section">
+		<!-- section that displays products fetched from the server, with a search function-->
+			<h2> Products </h2>
+			<hr>
+			<h3>Browse through products available for purchase, or search for something specific:</h3>
+			<br>
+			<input id="searchbar" type="text" placeholder= "&#128270 search..." oninput="search()">
+			<div style="width:80%"id="productlist"></div>
+		</div>
+		
+		<div id="location" class="section">
+		<!-- section that shows the map with relevant information regarding location -->
+			<h2> Location </h2>
+			<hr>
+			<h3>Location and contact details:</h3>
+			<img id="map" src="http://redsox.uoa.auckland.ac.nz/ds/map.png" alt="dundein dairy map" width="80%;" style="margin-left:10%;">
+			<!-- only the email is accessible, unable to make phone calls based from the webpage-->
+			<div id="contactinfo"></div>
+		</div>
+		
+		<div id="user" class="section">
+			<h2> User </h2>
+			<hr>
+			<div id="noUser">
+				<h3>Here you can log into an exisiting account or register for a new one</h3>
+				<p class="intro"> You must be logged in to purchase any of our available prodcuts. </p> 
+				<p id="email" style="display:none;"> Email: <input id="addr" placeholder="someone@something.com"></p>
+				<br>
+				<p> Username: <input id="uname" placeholder="Username"></p>
+				<br>
+
+				<p> Password: <input type="password" id="pword" placeholder="Password"></p>
+				<br>
+				
+				<p id="repass" style="display:none;"> Re-enter password: <input type="password" id="rpword" placeholder="Password"></p>
+				<br>
+
+				<!--<button class="log" onclick="updateUser()"> Log in </button> OR-->
+				<p id="log" style="float:left;"> <button class="log" onclick="logUser()"> Log in </button> Or </p>
+
+				<button style="float:left;margin-top:17px;margin-left:5px;" class="log" id="reg" onclick="preReg()"> Register </button>
+			</div>
+		</div>
+		
+		
+		<div id="news" class="section">
+		<!-- section that shows the most recent news articles pulled from the server -->
+			<h2> News </h2>
+			<hr>
+			<h3> Latest news and events: </h3>
+			<br>
+			<div id="articlelist"></div>
+		</div>
+		
+		<div id="guestbook" class="section">
+		<!-- a section that pulls comments from the server and allows 'guests' to post their own comments which are pushed to the server -->
+			<h2> Guest Book </h2>
+			<hr>
+			<h4>Here you can post comments and view posts made by other people</h4>
+			<br>
+			<div id="commentarea">
+				<textarea id ="commentfield" rows="20" cols= "15" wrap="soft" placeholder="Start typing something..."></textarea>
+				<br>
+				<p id="name">Name:<input id="username" placeholder="Enter your Name" style="width:40%;">
+				 <button id="postComment" onclick="postComment(); loadComments();"> Post Comment </button> <!-- onclick="postComment()"--></p>
+			</div>
+			<h3> -------- Recent Comments -------- </h3>
+			<div id="comments"></div>
+			
+		</div>
+	</body>
+</html>
