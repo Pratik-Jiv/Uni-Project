@@ -1,4 +1,4 @@
-# A Java GUI for interactive shapes
+# A Java GUI for interactive and moving shapes
 
 Most of this code was given to us as part of the project, meaning only a few of the functions and files were created by me.
 They are:
